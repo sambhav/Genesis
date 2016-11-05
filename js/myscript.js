@@ -1,18 +1,18 @@
 $(document).ready(function() {
 
-    i13 = $("li:contains('ISBN-13')").text().replace("ISBN-13:","").trim();
+    i13 = $("li:contains('ISBN-13')").first().text().replace("ISBN-13:","").trim();
     
-    name = $("#productTitle").text().trim();
+    name = $("#productTitle").first().text().trim();
     if(name == "")
     {
-        name = $("#ebooksProductTitle").text().trim();
+        name = $("#ebooksProductTitle").first().text().trim();
     }
     
-    author =  $(".author > a").text().trim();
+    author =  $(".author > a").first().text().trim();
     
     if (author == "")
     {
-        author = $(".contributorNameID").text();
+        author = $(".contributorNameID").first().text();
     }
     total = name + " " + author;
     total = total.trim();
