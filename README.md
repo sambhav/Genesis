@@ -29,3 +29,10 @@
 #### Enjoy! And please *star* the repo if this extension helped you.
 
 ![star](http://i.imgur.com/Uhx7FOA.png)
+
+
+Disclaimer
+----------
+
+The above software is not in any way responsible for the files that you download. Use at your own risk.
+The extension simply provides search results from libgen and the author doesn't bear any responsibilty on the kind of material you download or its copyright issues.
