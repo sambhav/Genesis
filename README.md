@@ -7,7 +7,7 @@
 
 1. Download the Genesis.crx file from the github repo.
 
-  [Click here to download](https://github.com/samj1912/Genesis/blob/master/Genesis.crx)
+  [Click here to download](https://github.com/samj1912/Genesis/raw/master/Genesis.crx)
 
 2. Open [chrome://extensions](chrome://extensions)
 
@@ -25,4 +25,4 @@
 
   ![dl button](http://i.imgur.com/zpTp2V6.png)
 
-##### Enjoy! And please *star* the repo if this extension helped you.
+#### Enjoy! And please *star* the repo if this extension helped you.
