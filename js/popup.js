@@ -3,11 +3,39 @@ $(document).ready(function ()
 	$('#i13a').hide();
 	$('.form-group').hide();
 	$(".preloader-wrapper").hide();
-	$('body').on('click', '.btn', function ()
+	$('body').on('click', '.dl', function ()
 	{
 		chrome.tabs.create({url: $(this).attr('href')});
 		return false;
 	});
+
+	// $('#search').click(function(){
+	// 	$(".preloader-wrapper").show();
+	// 	$("#message").hide();
+	// 	var searchQ = $("#search_q").val();
+	// 	// alert(searchQ);
+	// 	$.get("http://gen.lib.rus.ec/search.php?req=" + searchQ + "&lg_topic=libgen&open=0&view=simple&res=25&phrase=1&column=def", function (idata){
+
+	// 		url = $($.parseHTML(idata)).find('a[id]').attr('href');
+	// 		name = $($.parseHTML(idata)).find('a[id]').first().text();
+	// 		if(url==undefined)
+	// 		{
+	// 			$("#message").show();
+	// 			$("#message").html("Book not found. <br>Please retry appropriately.");
+	// 			$('.preloader-wrapper').hide();
+
+	// 		}
+	// 		else
+	// 		{
+	// 			$('#bname').text(name);
+	// 			parse(url);	
+
+	// 		}
+
+
+	// 	});
+
+	// });
 
 	function parse(url)
 	{
@@ -31,13 +59,14 @@ $(document).ready(function ()
 		var res = patt.test(tabURL);
 		if (res)
 		{
+			$('#sform').hide();
 			$(".preloader-wrapper").show();
 			chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"}, function (response){
 
 				if (response == undefined)
 				{
 					$("#message").show();
-					$("#message").text("Book not found. Please retry again on a correct page.");
+					$("#message").html("Book not found. <br>Please retry appropriately.");
 					$('.preloader-wrapper').hide();
 				}
 				else
@@ -55,7 +84,7 @@ $(document).ready(function ()
 								if (url == undefined)
 								{
 									$("#message").show();
-									$("#message").text("Book not found. Please retry again on a correct page.");
+									$("#message").html("Book not found. <br>Please retry appropriately.");
 									$('.preloader-wrapper').hide();
 								}
 								else
