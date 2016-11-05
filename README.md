@@ -23,8 +23,8 @@
 
 7. Click on the Genesis icon. You should get a download button after a while if the book is present in the index.
    * Note: 52+ million books are indexed on Library Genesis. 
-   * Try for the hardcover/paperback version if e-book version fails to be searched. 
-   * Better to try on amazon.com rather than amazon.in and search for the hardcover version which has an isbn number 
+   * Try for the **hardcover/paperback** version if e-book version fails to be searched. 
+   * Better to try on **amazon.com** rather than amazon.in and search for the hardcover version which has an isbn number 
 
   ![dl button](http://i.imgur.com/zpTp2V6.png)
 
