@@ -26,3 +26,5 @@
   ![dl button](http://i.imgur.com/zpTp2V6.png)
 
 #### Enjoy! And please *star* the repo if this extension helped you.
+
+![star](http://i.imgur.com/xKUEsFu.png)
