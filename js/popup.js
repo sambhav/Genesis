@@ -55,7 +55,7 @@ $(document).ready(function ()
 	chrome.tabs.query({active: true,currentWindow: true}, function (tabs){
 
 		tabURL = tabs[0].url;
-		patt = new RegExp("http*:\/\/.*amazon.*\/.*");
+		patt = new RegExp("http.*:\/\/.*amazon.*\/.*");
 		var res = patt.test(tabURL);
 		if (res)
 		{
@@ -103,6 +103,12 @@ $(document).ready(function ()
 					});
 				}
 			});
+		}
+		else
+		{
+			
+			$("#message").show();
+			$("#message").html("Please use the extension on Amazon.");
 		}
 	});
 });
