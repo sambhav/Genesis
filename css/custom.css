@@ -21,6 +21,10 @@ body, section {			/* Change width and height to own preferences */
 	padding-bottom: 20px;
 
 }
+
+.spinner-layer{
+	 border-color: #26c6da;
+}
 header {
 	margin-bottom: 20px;
 }

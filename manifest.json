@@ -1,8 +1,8 @@
 {
-  "name": "Amazon Genesis",
+  "name": "Genesis",
   "version": "1.0",
   "manifest_version": 2,
-  "description": "An extension to find the Lib-Gen page of the Amazon B",
+  "description": "The Almighty Book Downloader",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -16,7 +16,7 @@
   },
   "content_scripts": [
       {
-        "matches": [ "https://*/*","http://*/*","http://www.amazon.in/*"],
+        "matches": [ "https://*/*","http://*/*"],
         "js": ["js/jquery/jquery.js", "js/myscript.js"]
       }
     ],
@@ -24,12 +24,10 @@
           "default_icon": {                    // optional
             "16": "icons/icon16.png"           // optional
           },
-          "default_title": "Amazon Genesis",      // optional; shown in tooltip
+          "default_title": "Genesis",      // optional; shown in tooltip
           "default_popup": "popup.html"        // optional
         },
   "permissions": [
-    "contentSettings",
-    "contextMenus",
     "tabs",
     "webNavigation"
   ]
