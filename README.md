@@ -36,5 +36,4 @@
 Disclaimer
 ----------
 
-The above software is not in any way responsible for the files that you download. Use at your own risk.
-The extension simply provides search results from libgen and the author doesn't bear any responsibilty on the kind of material you download or its copyright issues.
+The links are being provided as a convenience and for informational purposes only; they do not constitute an endorsement or an approval by the Genesis of any of the products, services or opinions of the corporation or organization or individual. The author bears no responsibility for the accuracy, legality or content of the external site or for that of subsequent links. Contact the external site for answers to questions regarding its content.
