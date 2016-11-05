@@ -59,7 +59,6 @@ $(document).ready(function ()
 		var res = patt.test(tabURL);
 		if (res)
 		{
-			$('#sform').hide();
 			$(".preloader-wrapper").show();
 			chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"}, function (response){
 
