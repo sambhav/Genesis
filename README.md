@@ -21,7 +21,8 @@
 
 6. To use the extension, go to any amazon.in/amazon.com listing of any book.
 
-7. Click on the Genesis icon. You should get a download button after a while.
+7. Click on the Genesis icon. You should get a download button after a while if the book is present in the index.
+(52+ million books are indexed. Try for the hardcover/paperback version if e-book version fails to be searched) 
 
   ![dl button](http://i.imgur.com/zpTp2V6.png)
 
