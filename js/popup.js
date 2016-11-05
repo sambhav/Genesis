@@ -1,5 +1,6 @@
 $(document).ready(function ()
 {
+	// Extension inits and function to open download link in a new tab
 	$('#i13a').hide();
 	$('.form-group').hide();
 	$(".preloader-wrapper").hide();
@@ -36,7 +37,7 @@ $(document).ready(function ()
 	// 	});
 
 	// });
-
+	// Function to parse the libgen url and display the download button
 	function parse(url)
 	{
 		final_url = url.replace("book/index.php", "http://libgen.io/ads.php").trim();
@@ -51,7 +52,7 @@ $(document).ready(function ()
 
 		});
 	}
-
+	// queries the active tab and if detected to be amazon finds the isbn/book and searches for it on libgen
 	chrome.tabs.query({active: true,currentWindow: true}, function (tabs){
 
 		tabURL = tabs[0].url;
@@ -59,9 +60,10 @@ $(document).ready(function ()
 		var res = patt.test(tabURL);
 		if (res)
 		{
+			// if amazon, shows preloader
 			$(".preloader-wrapper").show();
 			chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"}, function (response){
-
+				//sends message to current tab, if response undefined shows error
 				if (response == undefined)
 				{
 					$("#message").show();
@@ -70,16 +72,18 @@ $(document).ready(function ()
 				}
 				else
 				{
+					// response OK, searches libgen for the book.
 					$.get("http://gen.lib.rus.ec/search.php?req=" + response.i13 + "&lg_topic=libgen&open=0&view=simple&res=25&phrase=1&column=def", function (idata){
 						
 						url = $($.parseHTML(idata)).find('a[id]').attr('href');
-						
+						// search via isbn unsuccessful, tries with book name now
 						if (url == undefined)
 						{
 							
 							$.get("http://gen.lib.rus.ec/search.php?req=" + response.total + "&lg_topic=libgen&open=0&view=simple&res=25&phrase=1&column=def", function (tdata){
 								
 								url = $($.parseHTML(tdata)).find('a[id]').attr('href');
+								// search with book name also unsuccessful, shows error
 								if (url == undefined)
 								{
 									$("#message").show();
@@ -104,9 +108,9 @@ $(document).ready(function ()
 				}
 			});
 		}
+		// extension wasn't used on Amazon
 		else
 		{
-			
 			$("#message").show();
 			$("#message").html("Please use the extension on Amazon.");
 		}
