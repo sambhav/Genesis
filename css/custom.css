@@ -3,29 +3,28 @@
  * Custom CSS
  *	
  */
+* {
+	font-family: Roboto;
+}
+nav {
+            height: 25px;
+        line-height: 25px;
 
+    }
+nav .brand-logo{
+	font-size: 1.6em;
+}    
 body, section {			/* Change width and height to own preferences */
-	width: 300px;
+	width: 200px;
 	max-height: 150px;
 	overflow-x: hidden;
 	padding-bottom: 20px;
-	padding-top: 20px;
 
 }
-.btn-huge{
-    padding-top:20px;
-    padding-bottom:20px;
+header {
+	margin-bottom: 20px;
 }
-* {
- 	border-radius: 0 !important;
-	box-shadow: none !important;
-}
-
 /* Basic style tweaks */
 
 
 
-/* Scroll Bar */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); }
-::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb:window-inactive  { background: red; }

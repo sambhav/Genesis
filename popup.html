@@ -2,42 +2,61 @@
 <html>
 	<head>
 	    <meta charset="utf-8">
-		<meta name="description" content="A basic template for a Chrome Extension using Twitter Bootstrap 3">
-		<meta name="author" content="Elliot Hesp">
-		
-		<title>Chrome Extension with Twitter Bootstrap 3.0</title>
-		
+ 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		  
 		<!-- Scripts -->
 		<script src="js/jquery-2.0.3.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		<script src="js/materialize.min.js"></script>
 		<script type="text/javascript" src="js/popup.js"></script>
 
 		<!-- Cascading Style Sheets -->
-		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="css/materialize.css" rel="stylesheet" media="screen">
+		<link href="css/icons.css" rel="stylesheet">
 		<link href="css/custom.css" rel="stylesheet" media="screen">
-		<link href="css/material.css" rel="stylesheet" media="screen">
 
 	</head>
 	
 	<body>
-	
-		<nav class="navbar navbar-default teal white-text" role="navigation">
-			<div class="navbar-header">
-			<center>
-				<a class="navbar-brand white-text" href="#" style="text-align:center !important"> Amazon Genesis</a>
-			</center>
-			</div>
-		</nav>
+		<header id="header" class="" height="20px">
+
+			<nav>
+			   <div class="nav-wrapper teal">
+			     <a href="#" class="brand-logo">Genesis</a>
+			   </div>
+			 </nav>
 			
-				
+		</header><!-- /header -->
+		
+		<div class="container">
+			
+		<div class="row">
+		  <form class="col s12">
+		    <div class="row">
+		      <div class="input-field col s12">
+
+		        <input placeholder="Search Query" id="first_name" type="text" class="validate">
+		      </div>
+	     	</div>
+	    	</form>
+	    </div> 
 		<center>
-			<div id="message" class="alert">FINDING BOOK,PLEASE WAIT!</div>
-			<button class="btn btn-large blue white-text" href="#"  id="i13a">Download</button>
-			<div class="form-group" style="margin-left:20px;margin-right:20px">
-			    <label for="inputdefault">Search Query :</label>
-			    <input class="form-control" id="inputdefault" type="text">
-		  	</div>
+			<div class="preloader-wrapper  active center">
+			   <div class="spinner-layer spinner-teal-only">
+			     <div class="circle-clipper left">
+			       <div class="circle"></div>
+			     </div><div class="gap-patch">
+			       <div class="circle"></div>
+			     </div><div class="circle-clipper right">
+			       <div class="circle"></div>
+			     </div>
+			   </div>
+			 </div>
+			<b>
+			<button class="waves-effect waves-light btn hidden"  href="" id="i13a"><i class="material-icons left">cloud_download</i>DOWNLOAD</button>
+			</b>
+			<div id="message"></div>
 		</center>
 		
+		</div>
 	</body>
 </html>
