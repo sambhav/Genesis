@@ -27,4 +27,4 @@
 
 #### Enjoy! And please *star* the repo if this extension helped you.
 
-![star](http://i.imgur.com/xKUEsFu.png)
+![star](http://i.imgur.com/Uhx7FOA.png)
