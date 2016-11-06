@@ -32,6 +32,8 @@
 
 ![star](http://i.imgur.com/Uhx7FOA.png)
 
+### Share this repo with your friends. Spread knowledge and books :) 
+
 
 Disclaimer
 ----------
