@@ -33,7 +33,7 @@
 ![star](http://i.imgur.com/Uhx7FOA.png)
 
 #### If Chrome disables the extension, please switch to Chrome Dev Channel ( Bleeding Edge of Chrome, tons of new features and less restriction )
-#### Download links for Chrome Dev Channel:
+##### Download links for Chrome Dev Channel:
 
 [Linux](https://www.google.com/chrome/browser/desktop/index.html?platform=linux&extra=devchannel) 
 
