@@ -32,7 +32,12 @@
 
 ![star](http://i.imgur.com/Uhx7FOA.png)
 
-#### If Chrome disables the extension, please switch to Chrome Dev Channel ( Bleeding Edge of Chrome, tons of new features and less restriction ) [Linux](https://www.google.com/chrome/browser/desktop/index.html?platform=linux&extra=devchannel) [Windows 64-bit](https://www.google.com/chrome/browser/desktop/index.html?extra=devchannel&platform=win64)
+#### If Chrome disables the extension, please switch to Chrome Dev Channel ( Bleeding Edge of Chrome, tons of new features and less restriction )
+#### Download links for Chrome Dev Channel:
+
+[Linux](https://www.google.com/chrome/browser/desktop/index.html?platform=linux&extra=devchannel) 
+
+[Windows 64-bit](https://www.google.com/chrome/browser/desktop/index.html?extra=devchannel&platform=win64)
 
 ### Share this repo with your friends. Spread knowledge and books :) 
 
