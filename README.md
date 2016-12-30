@@ -1,3 +1,9 @@
+Disclaimer
+----------
+
+The links are being provided as a convenience and for informational purposes only; they do not constitute an endorsement or an approval by the Genesis of any of the products, services or opinions of the corporation or organization or individual. The author bears no responsibility for the accuracy, legality or content of the external site or for that of subsequent links. Contact the external site for answers to questions regarding its content.
+
+
 # Genesis
 ### The Almighty Book Downloader
 
@@ -42,7 +48,3 @@
 ### Share this repo with your friends. Spread knowledge and books :) 
 
 
-Disclaimer
-----------
-
-The links are being provided as a convenience and for informational purposes only; they do not constitute an endorsement or an approval by the Genesis of any of the products, services or opinions of the corporation or organization or individual. The author bears no responsibility for the accuracy, legality or content of the external site or for that of subsequent links. Contact the external site for answers to questions regarding its content.
