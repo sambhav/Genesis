@@ -9,7 +9,7 @@ The links are being provided as a convenience and for informational purposes onl
 
 #### A Chrome Extension to download your favorite books as pdfs/ebooks. Uses Lib-Gen as a repository.
 
-##How to install:
+## How to install:
 
 1. Download the Genesis.crx file from the github repo.
 
@@ -28,9 +28,9 @@ The links are being provided as a convenience and for informational purposes onl
 6. To use the extension, go to any amazon.in/amazon.com listing of any book.
 
 7. Click on the Genesis icon. You should get a download button after a while if the book is present in the index.
-   * Note: 52+ million books are indexed on Library Genesis. 
-   * Try for the **hardcover/paperback** version if e-book version fails to be searched. 
-   * Better to try on **amazon.com** rather than amazon.in and search for the hardcover version which has an isbn number 
+   * Note: 52+ million books are indexed on Library Genesis.
+   * Try for the **hardcover/paperback** version if e-book version fails to be searched.
+   * Better to try on **amazon.com** rather than amazon.in and search for the hardcover version which has an isbn number
 
   ![dl button](http://i.imgur.com/zpTp2V6.png)
 
@@ -41,10 +41,8 @@ The links are being provided as a convenience and for informational purposes onl
 #### If Chrome disables the extension, please switch to Chrome Dev Channel ( Bleeding Edge of Chrome, tons of new features and less restrictions )
 ##### Download links for Chrome Dev Channel:
 
-[Linux](https://www.google.com/chrome/browser/desktop/index.html?platform=linux&extra=devchannel) 
+[Linux](https://www.google.com/chrome/browser/desktop/index.html?platform=linux&extra=devchannel)
 
 [Windows 64-bit](https://www.google.com/chrome/browser/desktop/index.html?extra=devchannel&platform=win64)
 
-### Share this repo with your friends. Spread knowledge and books :) 
-
-
+### Share this repo with your friends. Spread knowledge and books :)
