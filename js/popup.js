@@ -44,8 +44,8 @@ $(document).ready(function ()
 		console.log("Dedicated to my lovely bookworm - CS")
 		$.get(final_url, function (finalData)
 		{
-			furl = $($.parseHTML(finalData)).find("td:contains('DOWNLOAD') > a").attr('href');
-			furl = "http://libgen.io/get.php?" + furl.split('?')[1];
+			furl = $($.parseHTML(finalData)).find("td:contains('DOWNLOAD') > a").attr("href");
+			furl = "http://libgen.io/get.php?" + furl.split("?")[1];
 			$('#i13a').attr('href', furl);
 			$('#i13a').show();
 			$('.preloader-wrapper').hide();
