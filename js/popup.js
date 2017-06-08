@@ -84,14 +84,11 @@ $(document).ready(function ()
 				{
 					// response OK, searches libgen for the book.
 					$.get("http://gen.lib.rus.ec/search.php?req=" + response.i13 + "&lg_topic=libgen&open=0&view=simple&res=25&phrase=1&column=def", function (idata){
-						console.log("ISBN : (" + response.i13 + ")");
 						url = $($.parseHTML(idata)).find('a[id]').attr('href');
 
 						// search via isbn unsuccessful, tries with book name now
 						if (url == undefined)
-						{
-							console.log("I am in undefined url");
-							
+						{	
 							$.get("http://gen.lib.rus.ec/search.php?req=" + response.total + "&lg_topic=libgen&open=0&view=simple&res=25&phrase=1&column=def", function (tdata){
 								
 								url = $($.parseHTML(tdata)).find('a[id]').attr('href');
