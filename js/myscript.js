@@ -1,18 +1,24 @@
 $(document).ready(function() {
     // Finding isbn and book name + author name
     var hostname = location.hostname.toLowerCase();
-    var hostcode = "N";
-    if(hostname.indexOf("amazon") != -1){
-        hostcode = "A";
-    }else if(hostname.indexOf("flipkart") != -1){
-        hostcode = "F";
-    }else if(hostname.indexOf("snapdeal") != -1){
-        hostcode = "S";
+    const AMAZON = { hostname : "amazon" , hostcode : "A" };
+    const FLIPKART = { hostname : "flipkart" , hostcode : "F" };
+    const SNAPDEAL = { hostname : "snapdeal" , hostcode : "S" };
+    const NOT_VALID = { hostname : "invalid" , hostcode : "N" }; // For hosts that are not allowed.
+    const INVALID = "INVALID"; 
+    
+    var hostcode = NOT_VALID.hostcode;
+    if(hostname.indexOf(AMAZON.hostname) != -1){
+        hostcode = AMAZON.hostcode;
+    }else if(hostname.indexOf(FLIPKART.hostname) != -1){
+        hostcode = FLIPKART.hostcode;
+    }else if(hostname.indexOf(SNAPDEAL.hostname) != -1){
+        hostcode = SNAPDEAL.hostcode;
     }
     
-    if(hostcode != "N"){ //Don't parse if website is other than those of specified.
-            var i13 , total , author, name;
-        if(hostcode == "A"){ // Proceed as follows if amazon
+    if(hostcode != NOT_VALID.hostcode){ //Don't parse if website is other than those of specified.
+        var i13 , total , author, name;
+        if(hostcode == AMAZON.hostcode){ // Proceed as follows if amazon
             i13 = $("li:contains('ISBN-13')").first().text().replace("ISBN-13:","").trim();
             
             name = $("#productTitle").first().text().trim();
@@ -32,7 +38,7 @@ $(document).ready(function() {
             // Concatinating for final search
             total = name + " " + author;
             total = total.trim();
-        }else if(hostcode == "F"){
+        }else if(hostcode == FLIPKART.hostcode){
             let infoList = document.getElementsByClassName("_2-riNZ");
             let len = infoList.length;
 
@@ -48,8 +54,7 @@ $(document).ready(function() {
                     break;
                 } 
             }
-        }else if(hostcode == "S"){
-
+        }else if(hostcode == SNAPDEAL.hostcode){
             let infoList = $(".h-content");
             let len = infoList.length;
             name = document.getElementsByClassName("pdp-e-i-head")[0].innerText;
@@ -74,10 +79,10 @@ $(document).ready(function() {
         // Listener to send the value to the extension when extension popup clicked
         chrome.runtime.onMessage.addListener(
         function(request, sender, sendResponse) {
-            if(hostcode != "N")
+            if(hostcode != NOT_VALID.hostcode)
                 sendResponse({i13:i13,total:total});
             else
-                sendResponse({i13:"INVALID" , total: "INVALID"});
+                sendResponse({i13:INVALID , total: INVALID});
         });
     }
 });
