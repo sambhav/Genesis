@@ -60,15 +60,7 @@ $(document).ready(function ()
 		const flipkartPattern = new RegExp("http.*:\/\/.*flipkart.*\/.*");
 		const snapdealPattern = new RegExp("http.*:\/\/.*snapdeal.*\/.*");
 
-		var isHostnameValid;
-
-		if(amazonPattern.test(tabURL) || flipkartPattern.test(tabURL) || snapdealPattern.test(tabURL)){
-			isHostnameValid = true;
-		}else{
-			isHostnameValid = false;
-		}
-
-		if (isHostnameValid)
+		if (amazonPattern.test(tabURL) || flipkartPattern.test(tabURL) || snapdealPattern.test(tabURL))
 		{
 			// if amazon, shows preloader
 			$(".preloader-wrapper").show();
