@@ -39,11 +39,11 @@ $(document).ready(function() {
             total = name + " " + author;
             total = total.trim();
         }else if(hostcode === FLIPKART.hostcode){
-            let infoList = document.getElementsByClassName("_2-riNZ");
+            let infoList = $("._3WHvuP > ul").find("li");
             let len = infoList.length;
 
             name = location.pathname.split("/")[1].split("-").join(" ");
-            author = document.getElementsByClassName("PWqzqY")[0].innerText;
+            author = $(".PWqzqY").get(0).innerText;
             total = name + " " + author;
             for(let i = 0 ; i < len ; i++)
             {
@@ -57,7 +57,7 @@ $(document).ready(function() {
         }else if(hostcode === SNAPDEAL.hostcode){
             let infoList = $(".h-content");
             let len = infoList.length;
-            name = document.getElementsByClassName("pdp-e-i-head")[0].innerText;
+            name = $(".pdp-e-i-head").get(0).innerText;
             author = "";
             let authorFound = false, isbnFound = false;
             for(let i = 0 ; i < len ; i++)
