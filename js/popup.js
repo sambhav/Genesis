@@ -56,11 +56,11 @@ $(document).ready(function ()
 	chrome.tabs.query({active: true,currentWindow: true}, function (tabs){
 
 		tabURL = tabs[0].url;
-		amazonPattern = new RegExp("http.*:\/\/.*amazon.*\/.*");
-		flipkartPattern = new RegExp("http.*:\/\/.*flipkart.*\/.*");
-		snapdealPattern = new RegExp("http.*:\/\/.*snapdeal.*\/.*");
+		const amazonPattern = new RegExp("http.*:\/\/.*amazon.*\/.*");
+		const flipkartPattern = new RegExp("http.*:\/\/.*flipkart.*\/.*");
+		const snapdealPattern = new RegExp("http.*:\/\/.*snapdeal.*\/.*");
 
-		var code_to_be_sent, isHostnameValid;
+		var isHostnameValid;
 
 		if(amazonPattern.test(tabURL) || flipkartPattern.test(tabURL) || snapdealPattern.test(tabURL)){
 			isHostnameValid = true;
