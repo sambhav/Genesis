@@ -72,10 +72,6 @@ $(document).ready(function() {
     // Listener to send the value to the extension when extension popup clicked
     chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
-        if(hostname.indexOf(AMAZON) !== -1 || hostname.indexOf(FLIPKART) !== -1 || hostname.indexOf(SNAPDEAL) !== -1){
-            sendResponse({i13:i13,total:total});
-        }else{
-            sendResponse({i13:INVALID , total: INVALID});
-        }
+        sendResponse({i13:i13,total:total});
     });
 });
