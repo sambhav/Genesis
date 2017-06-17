@@ -56,9 +56,11 @@ $(document).ready(function ()
 	chrome.tabs.query({active: true,currentWindow: true}, function (tabs){
 
 		tabURL = tabs[0].url;
-		patt = new RegExp("http.*:\/\/.*amazon.*\/.*");
-		var res = patt.test(tabURL);
-		if (res)
+		const amazonPattern = new RegExp("http.*:\/\/.*amazon.*\/.*");
+		const flipkartPattern = new RegExp("http.*:\/\/.*flipkart.*\/.*");
+		const snapdealPattern = new RegExp("http.*:\/\/.*snapdeal.*\/.*");
+
+		if (amazonPattern.test(tabURL) || flipkartPattern.test(tabURL) || snapdealPattern.test(tabURL))
 		{
 			// if amazon, shows preloader
 			$(".preloader-wrapper").show();
@@ -70,16 +72,15 @@ $(document).ready(function ()
 					$("#message").html("Book not found. <br>Please retry appropriately.");
 					$('.preloader-wrapper').hide();
 				}
-				else
+				else 
 				{
 					// response OK, searches libgen for the book.
 					$.get("http://gen.lib.rus.ec/search.php?req=" + response.i13 + "&lg_topic=libgen&open=0&view=simple&res=25&phrase=1&column=def", function (idata){
-						
 						url = $($.parseHTML(idata)).find('a[id]').attr('href');
+
 						// search via isbn unsuccessful, tries with book name now
 						if (url == undefined)
-						{
-							
+						{	
 							$.get("http://gen.lib.rus.ec/search.php?req=" + response.total + "&lg_topic=libgen&open=0&view=simple&res=25&phrase=1&column=def", function (tdata){
 								
 								url = $($.parseHTML(tdata)).find('a[id]').attr('href');
@@ -112,7 +113,7 @@ $(document).ready(function ()
 		else
 		{
 			$("#message").show();
-			$("#message").html("Please use the extension on Amazon.");
+			$("#message").html("Please use the extension on Amazon / Flipkart / Snapdeal only.");
 		}
 	});
 });
