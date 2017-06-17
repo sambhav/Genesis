@@ -1,0 +1,16 @@
+language: C 
+compiler: gcc 
+before_install:
+- openssl aes-256-cbc -K $encrypted_42c6dbee4fe4_key -iv $encrypted_42c6dbee4fe4_iv
+  -in key.pem.enc -out key.pem -d
+script:
+  - bash package.bash Genesis/ key.pem
+deploy:
+  provider: releases
+  api_key:
+    secure: CkjMOatSR8E1nUBBxT3bjEPKwHBzTQLrip18JMKMVHk2FsT0KsnYGhWw6kgH6MO/0SrGXXuCpCc3OmMJV5nLQrepiSjsQbulfWcJAosbtqBUQybrmYPPvvlFybF5RwI+zxBxP4DkrEaN7F+SKDI9h/VjIQCRzeK8Y/A/inOvvKqktJMpkaaQpPFZfA/J3w9p6Bs+6d9YLsSOdlFP/T7W7DBOM09AC+IT9bn0tmkRH0SdeTQRVAjmT7q67Fb15PQDtcvtUQT8CJg6AFXjUkAa7DdZ1STs+y2XCTnW3d6G+8bQKWfaAskFzqJW/7UByvjQVxgzPGHAKaFXNu+CFRkfyLZABEfSZ5L/qVvUac4kj+PMf56Ow6ABotpxfu72ZjmZYwlCE/GGOUn8utjjJGSdWWqkYgsF2VC14S3p5BwzoBKGtUQNkWlBTgPjTZXw6Y7NArArtguSY49xACY/2vsOEDyfgdd9OdxwR2eJP86j8leZ66hy852/qZwvIual/uQ3s3A5VXXCKDpMse4uHJ1UBYeB0UrsgM0N01KUtYGuFAqt72esokdvziRg4GRxGrzqeRzsRZFSbC/PyDRstyd9OrLC/r5e9N1gILaEhwpbxsquRp0iCzP4zfBSCqMjcY3eZr4bU1GJUhHoAYRAQh7gJlU+yKkseeg/6+HUGJFSgDc=
+  file: Genesis.crx
+  skip_cleanup: true
+  overwrite: true
+  on:
+    repo: samj1912/Genesis
