@@ -13,7 +13,7 @@ The links are being provided as a convenience and for informational purposes onl
 
 1. Download the Genesis.crx file from the github repo.
 
-  [Click here to download](https://github.com/samj1912/Genesis/raw/master/Genesis.crx)
+  [Click here to find the latest version of Genesis.crx](https://github.com/samj1912/Genesis/releases/latest)
 
 2. Open [chrome://extensions](chrome://extensions)
 
